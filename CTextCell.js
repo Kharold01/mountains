@@ -7,7 +7,7 @@ CTextCell.prototype.draw = function(width, height) {
 	for (var i = 0; i < height; i++) {
 		var line = this.text[i] || "";
 		var spaces = 0;
-		print((width - line.length)%2);
+		//print((width - line.length)%2);
 		    spaces = (width - line.length)/2;
 		    if ((spaces * 2)%2 == 0)
 		result.push(repeat(" ", spaces)  + line + repeat(" ", spaces));
