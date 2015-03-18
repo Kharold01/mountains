@@ -3,6 +3,7 @@ load('drawFuncs.js');
 load('TextCell.js');
 load('UnderlinedCell.js');
 load('RTextCell.js');
+load('CTextCell.js');
 
 // Here's where you load the dataset
 // load('mountains.js');
@@ -19,7 +20,7 @@ var dateReg = (rightJustifyDates?/^(\d{2}|\d)[.-/](\d|\d{2})[.-/]\d{2}$/:null);
 function dataTable(data) {
   var keys = Object.keys(data[0]);
   var headers = keys.map(function(name) {
-    return new UnderlinedCell(new TextCell(name));
+    return new UnderlinedCell(new CTextCell(name));
   });
   var body = data.map(function(row) {
     return keys.map(function(name) {
@@ -27,9 +28,9 @@ function dataTable(data) {
       // This was changed:
       // Here is where new date type test will go
       if ((typeof value == "number"))
-        return new RTextCell(String(value));
+        return new CTextCell(String(value));    
       else
-	    //print(value.match(dateReg));
+	    print(value.match(dateReg));
         if(typeof value == "string" && value.match(dateReg))
 	  return new RTextCell(String(value));
 	else
