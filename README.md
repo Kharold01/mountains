@@ -11,4 +11,8 @@ printDataRJ is where it prints the underlined cells centered as well as cells th
 
 randomInfo contains my data set and it also has the code for calculating the age based on time passing. Side note: my heights are clearly not correct for a few of the people but that was for the purpose of showing what happens when the numbers are different lengths when trying to center them. 
 
+
+My homework for Ch. 9 will be rexexp golf.. however, does this mean we can't change our mind?
+
+
 To run this code, use the printDataRJ file and use d8. It should print the table out with the headings centered, the heightIn cells  centered, and the dates right alligned. It should also have an age column that shows how old they are in years based on how long it's been since the birthday date passed.  
